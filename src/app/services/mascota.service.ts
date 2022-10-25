@@ -14,12 +14,7 @@ export class MascotaService {
     return this.http.get("http://localhost:8080/api/mascota/getAllMascotas");
   }
 
-  insertarMascota(data:any) {
-    data = {
-      nombre: "desde angular",
-      edad: 2,
-      tipo: "Perro"
-    };
+  insertarMascota(data:any) {    
     return this.http.post("http://localhost:8080/api/mascota/guardarMascota", data );
   }
 

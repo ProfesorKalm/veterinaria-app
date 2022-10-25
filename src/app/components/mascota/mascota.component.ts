@@ -13,7 +13,7 @@ export class MascotaComponent implements OnInit {
   mascotas:any = [];
 
   constructor(private mascotaServ: MascotaService) {
-    
+    this.listarMascotas();
   }
 
   ngOnInit() {

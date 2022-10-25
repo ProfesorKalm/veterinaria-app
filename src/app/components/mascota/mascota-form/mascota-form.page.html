@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario</ion-title>  
+    <ion-buttons>
+      <ion-back-button text="Volver"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>   
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="mascota.nombre" type="text" placeholder="Ingrese el nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input [(ngModel)]="mascota.edad" type="number" placeholder="Ingrese la edad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tipo de Mascota</ion-label>
+      <ion-input [(ngModel)]="mascota.tipo" type="text" placeholder="Ingrese el tipo"></ion-input>
+    </ion-item>
+  </ion-list>
+  <br>
+  <ion-button expand="block" (click)="agregarMascota()">Agregar</ion-button>
+</ion-content>

@@ -12,5 +12,12 @@
       <ion-title size="large">Mascotas</ion-title>
     </ion-toolbar>
   </ion-header>
-  <app-mascota></app-mascota>  
+  
+<app-mascota></app-mascota>  
+   <!-- fab placed to the bottom end -->
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="irFormularioMascota()">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>       
 </ion-content>
