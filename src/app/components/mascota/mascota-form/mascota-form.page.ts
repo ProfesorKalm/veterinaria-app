@@ -28,7 +28,7 @@ export class MascotaFormPage implements OnInit {
         if(mascota.id != null) {
           // se agrego correctamente
           // volver a la pagina de inicio tab
-          this.router.navigate(["/"]);
+          this.router.navigateByUrl("/tabs/tab1", { skipLocationChange: false } );
         }
       });
 

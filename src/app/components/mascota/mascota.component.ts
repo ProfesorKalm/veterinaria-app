@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { MascotaService } from 'src/app/services/mascota.service';
 
 
@@ -9,21 +10,28 @@ import { MascotaService } from 'src/app/services/mascota.service';
 })
 
 export class MascotaComponent implements OnInit {
+  
+  
   nombre ="Marcos";
   mascotas:any = [];
 
-  constructor(private mascotaServ: MascotaService) {
+  constructor(
+    private mascotaServ: MascotaService,
+    private route: ActivatedRoute
+    
+  ) {
     this.listarMascotas();
   }
 
   ngOnInit() {
-    this.listarMascotas();
-
+    this.route.url.subscribe( () => {
+      console.log("params ruta:");
+      this.listarMascotas();
+    });   
   }
 
   listarMascotas(){
-    this.mascotaServ.getAllMascotas().subscribe((data:any) => {
-      //console.log(data);
+    this.mascotaServ.getAllMascotas().subscribe((data:any) => {      
       this.mascotas = data;
     });
   }
